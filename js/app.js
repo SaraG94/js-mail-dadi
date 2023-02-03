@@ -5,27 +5,26 @@ console.log(emailUserList)
 let emailUser = prompt ('Inserire email')
 console.log(emailUser)
 
-
+let welcome = document.getElementById('Saluti')
 // (ciclo + if)
+
+
+let checkOk ;
+
 for(let i = 0; i < emailUserList.length; i++){
     let email = emailUserList[i]
-    console.log(email)
-    let welcome = document.getElementById('Saluti')
+    console.log(email)   
     
     if (email === emailUser) {
-        let checkOk = (email === emailUser);
-        
-        console.log(checkOk) 
-        if (checkOk){
-            welcome.innerHTML="Benvenuto"
-        }else{
-            welcome.innerHTML="Error"
-        }
+        checkOk = true;
+       
     }else{
         console.log('Error')
-        //let checkKo = (email !== emailUser);
-        //if(checkKo){
-        //    welcome.innerHTML="Error"
-        //}
     }
+}
+
+if ( checkOk === true){
+    welcome.innerHTML="Benvenuto";
+}else{
+    welcome.innerHTML="Error"; 
 }
