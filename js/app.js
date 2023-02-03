@@ -4,15 +4,20 @@ console.log(emailUserList)
 //chiedere email a utente
 let emailUser = prompt ('Inserire email')
 console.log(emailUser)
-//stampare email presente (ciclo + if)
 
+let welcome = document.getElementById('Saluti')
+console.log(welcome)
+
+// (ciclo + if)
 for(let i = 0; i < emailUserList.length; i++){
     let email = emailUserList[i]
     console.log(email)
     
     if (email === emailUser) {
         console.log('Benvenuto')
+        welcome.innerHTML="Benvenuto"
     }else{
         console.log('Error')
+        welcome.innerHTML="Error"
     }
 }
