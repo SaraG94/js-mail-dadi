@@ -5,3 +5,14 @@ console.log(emailUserList)
 let emailUser = prompt ('Inserire email')
 console.log(emailUser)
 //stampare email presente (ciclo + if)
+
+for(let i = 0; i < emailUserList.length; i++){
+    let email = emailUserList[i]
+    console.log(email)
+    
+    if (email === emailUser) {
+        console.log('Benvenuto')
+    }else{
+        console.log('Error')
+    }
+}
