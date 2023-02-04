@@ -28,3 +28,34 @@ if ( checkOk === true){
 }else{
     welcome.innerHTML="Error"; 
 }
+
+
+///////dadi
+
+//generare numeri random per il pc
+let dicePc = Math.floor(Math.random() * 6) + 1
+console.log(dicePc)
+
+//generare numeri random per l'utente
+let diceUser = Math.floor(Math.random() * 6) + 1
+console.log(diceUser)
+
+//variabile per stampare
+let result = document.getElementById('game-results')
+
+
+//confrontare i numeri, il maggiore vince
+if (dicePc < diceUser){
+    console.log('User win');
+
+    result.innerHTML= dicePc + " < " + diceUser +" "+"User win";
+
+}else if(dicePc === diceUser){
+    console.log('Pareggio');
+
+    result.innerHTML= dicePc + " = " + diceUser +" "+ "Pareggio";
+}else{
+    console.log('Pc win');
+
+    result.innerHTML= dicePc + " > " + diceUser +" "+ "Pc win";
+}
